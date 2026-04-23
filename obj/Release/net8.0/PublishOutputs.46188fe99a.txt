@@ -1,0 +1,12 @@
+/home/ec2-user/myapi-published/MyApi
+/home/ec2-user/myapi-published/appsettings.Development.json
+/home/ec2-user/myapi-published/appsettings.json
+/home/ec2-user/myapi-published/MyApi.dll
+/home/ec2-user/myapi-published/MyApi.runtimeconfig.json
+/home/ec2-user/myapi-published/MyApi.pdb
+/home/ec2-user/myapi-published/Microsoft.EntityFrameworkCore.dll
+/home/ec2-user/myapi-published/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/ec2-user/myapi-published/Microsoft.EntityFrameworkCore.Relational.dll
+/home/ec2-user/myapi-published/Npgsql.dll
+/home/ec2-user/myapi-published/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/ec2-user/myapi-published/MyApi.deps.json
