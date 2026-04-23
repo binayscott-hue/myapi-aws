@@ -1,0 +1,31 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Build
+      run: dotnet publish -c Release -o ./publish
+
+    - name: Deploy to EC2
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ec2-user
+        key: ${{ secrets.EC2_KEY }}
+        script: |
+          cd ~/MyApi
+          git pull origin main
+          dotnet publish -c Release -o ~/myapi-published
+          sudo systemctl restart myapi
